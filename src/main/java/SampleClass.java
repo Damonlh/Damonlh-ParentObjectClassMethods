@@ -1,3 +1,4 @@
+import java.util.Objects;
 /**
  * The test cases for this class use methods called .equals which aren't written anywhere in this class. How?
  * All objects have a method called .equals and a method called toString - they are inherited from the Object class,
@@ -58,7 +59,36 @@ public class SampleClass {
     //    implement a custom .equals(SampleClass other){} method here.
 
 
+    @Override
+
+    public boolean equals(Object o)
+    {
+        if (this == o ) 
+        {
+            return true;   
+        }
+
+        if (o == null || getClass() != o.getClass()) 
+        {
+            return false;    
+        }
+
+        SampleClass sample = (SampleClass) o;
+        return this.a == sample.a && this.b == sample.b;
+
+    }
+
+
     //    implement a custom .toString(){} method here.
+
+    @Override
+
+    public String toString()
+    {
+        return "SampleClass {" +
+                "varible a = " + a + 
+                "varible b = " + b;
+    }
 
     
 }
