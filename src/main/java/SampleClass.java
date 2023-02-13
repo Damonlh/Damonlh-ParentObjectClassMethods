@@ -87,7 +87,7 @@ public class SampleClass {
     {
         return "SampleClass {" +
                 "varible a = " + a + 
-                "varible b = " + b;
+                "varible b = " + b + "}";
     }
 
     
